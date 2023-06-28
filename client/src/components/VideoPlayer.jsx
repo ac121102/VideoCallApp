@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   flip: {
-    //  -o-transform : scaleX(-1);
-    // -moz-transform : scaleX(-1);
-    // -webkit-transform : scaleX(-1);
-    // -ms-transform: scaleX(-1);
-    // transform : scaleX(-1);
+    "-o-transform" : "scaleX(-1)",
+    "-moz-transform" : "scaleX(-1)",
+    "-webkit-transform" : "scaleX(-1)",
+    "-ms-transform": "scaleX(-1)",
+    "transform" : "scaleX(-1)"
   },
   gridContainer: {
     justifyContent: 'center',
@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px',
     border: '2px solid black',
     margin: '10px',
+    background: 'transparent'
   },
 }));
 
@@ -71,14 +72,14 @@ const VideoPlayer = () => {
               playsInline
               ref={userVideo}
               autoPlay
-              className={classes.uservideo}
+              className={`${classes.uservideo} ${classes.flip}`}
             />
           </Grid>
         </Paper>
       )}
 
       {/* Our Own Video */}
-      {stream != null && (
+      {true && (
         <Paper className={classes.paper}>
           <Grid
             item
@@ -96,7 +97,7 @@ const VideoPlayer = () => {
               muted
               ref={myVideo}
               autoPlay
-              className={classes.myvideo}
+              className={`${classes.myvideo} ${classes.flip}`}
             />
           </Grid>
         </Paper>

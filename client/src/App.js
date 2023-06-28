@@ -46,7 +46,7 @@ const App = () => {
           variant='h2'
           align='center'
         >
-          P2P Video Call
+          Anonymous Video Call
         </Typography>
       </AppBar>
       
