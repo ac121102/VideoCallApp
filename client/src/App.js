@@ -46,10 +46,10 @@ const App = () => {
           variant='h2'
           align='center'
         >
-          Anonymous Video Call
+          Video Call
         </Typography>
       </AppBar>
-      
+
       <VideoPlayer />
 
       <Options>
