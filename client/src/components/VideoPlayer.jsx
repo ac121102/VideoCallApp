@@ -12,17 +12,17 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   uservideo: {
-    width: '70vw',
+    width: '66vw',
     // [theme.breakpoints.down('xs')]: {
     //   width: '300px',
     // },
   },
   flip: {
-    "-o-transform" : "scaleX(-1)",
-    "-moz-transform" : "scaleX(-1)",
-    "-webkit-transform" : "scaleX(-1)",
-    "-ms-transform": "scaleX(-1)",
-    "transform" : "scaleX(-1)"
+    '-o-transform': 'scaleX(-1)',
+    '-moz-transform': 'scaleX(-1)',
+    '-webkit-transform': 'scaleX(-1)',
+    '-ms-transform': 'scaleX(-1)',
+    transform: 'scaleX(-1)',
   },
   gridContainer: {
     justifyContent: 'center',
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px',
     border: '2px solid black',
     margin: '10px',
-    background: 'transparent'
+    background: 'transparent',
   },
 }));
 
@@ -55,7 +55,7 @@ const VideoPlayer = () => {
       className={classes.gridContainer}
     >
       {/* Other user's Video */}
-      {callAccepted && !callEnded && (
+      {(callAccepted && !callEnded) && (
         <Paper className={classes.paper}>
           <Grid
             item
